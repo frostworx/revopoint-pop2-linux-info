@@ -166,3 +166,10 @@ user_debug=31 storagemedia=mtd androidboot.storagemedia=mtd androidboot.mode=nor
 # cat firmware_version 
 v2.5.25.20220207
 ```
+
+#
+`/oem` and `/userdata` are writable
+
+rootfs is rw remountable:
+`mount -o remount,rw /`
+
