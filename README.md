@@ -173,3 +173,17 @@ v2.5.25.20220207
 rootfs is rw remountable:
 `mount -o remount,rw /`
 
+
+# wild guess
+
+stopping for now, but I'd guess that all required data are simply exported using lighttpd via cgi:
+
+```
+`# ls -la /tmp/webroot/cgi-bin
+total 80
+drwxr-xr-x 2 root root   100 Jan  1 00:00 .
+drwxr-xr-x 4 root root   120 Jan  1 00:00 ..
+-rwxr-xr-x 1 root root 26220 Jan  1 00:00 zx_cmd.cgi
+-rwxr-xr-x 1 root root 22072 Jan  1 00:00 zx_media.cgi
+-rwxr-xr-x 1 root root 26148 Jan  1 00:00 zx_upload.cgi
+```
