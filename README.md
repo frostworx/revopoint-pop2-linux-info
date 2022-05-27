@@ -187,3 +187,27 @@ drwxr-xr-x 4 root root   120 Jan  1 00:00 ..
 -rwxr-xr-x 1 root root 22072 Jan  1 00:00 zx_media.cgi
 -rwxr-xr-x 1 root root 26148 Jan  1 00:00 zx_upload.cgi
 ```
+
+
+the device has wlan0 and wlan1 devices.
+ by default wlan1 opens the `POP2-REVO-XXXXXXXX` AP and wlan0 would connect to a `POP` AP
+ 
+ ```
+ # cat /data/wpa_supplicant.configO 
+#pop2_enable=enable
+ctrl_interface=/var/run/wpa_supplicant
+ap_scan=1
+update_config=1
+
+network={
+        ssid="POP"
+        psk="12345678"
+        key_mgmt=WPA-PSK
+        pairwise=CCMP TKIP 
+        proto=WPA2 
+}
+```
+
+(the functions in `/data/zx_start.sh` are not very clean, so not sure if wlan0 even is intended).
+anyway you can simply edit `/data/wpa_supplicant.config` to join your own network.
+_(haven't checked for too long, but it doesn't seem to try connect anything in the internet - of course better safe than sorry)_
