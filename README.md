@@ -156,3 +156,8 @@ unix  3      [ ]         DGRAM                       618
 unix  2      [ ]         DGRAM                      7768 
 unix  3      [ ]         DGRAM                       619 
 ```
+
+```
+# cat /proc/cmdline 
+user_debug=31 storagemedia=mtd androidboot.storagemedia=mtd androidboot.mode=normal  earlycon=uart8250,mmio32,0xff570000 console=ttyFIQ0 ubi.mtd=4 root=ubi0:rootfs rootfstype=ubifs snd_aloop.index=7 mtdparts=spi-nand0:0x100000@0x200000(vnvm),0x400000@0x300000(uboot),0x100000@0x780000(misc),0x800000@0x880000(boot),0x5000000@0x1080000(rootfs),0x1000000@0x6080000(recovery),0x600000@0x7080000(userdata),0x800000@0x7680000(oem),0xe0000@0x7e80000(backup)
+```
