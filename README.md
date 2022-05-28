@@ -211,3 +211,7 @@ network={
 (the functions in `/data/zx_start.sh` are not very clean, so not sure if wlan0 even is intended).
 anyway you can simply edit `/data/wpa_supplicant.config` to join your own network.
 _(haven't checked for too long, but it doesn't seem to try connect anything in the internet - of course better safe than sorry)_
+
+
+After having joined the own network, it is enough to edit the `3DCamera.dll` from RevoScan with a hexeditor, search for the Pop 2 default IP `192.168.179.1`
+and replace it with the new IP from the own network. So no need to connect to the Revopoint AP anymore.
