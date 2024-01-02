@@ -215,3 +215,68 @@ _(haven't checked for too long, but it doesn't seem to try connect anything in t
 
 After having joined the own network, it is enough to edit the `3DCamera.dll` from RevoScan with a hexeditor, search for the Pop 2 default IP `192.168.179.1`
 and replace it with the new IP from the own network. So no need to connect to the Revopoint AP anymore.
+
+
+# bump 24.01
+Later fw versions of the pop2 and also of the newer device "range" do no longer have the root passwort "internet" (see #1)
+
+
+I cancelled the hydra brute force on the "range" after several hours _(imho not very likely that the newer passwd is listed in the 10-million anyway)_.
+
+Assuming newer firmware of "pop2" and/or "range" have still more or less the same binaries _(for example dropbear is still at 2019.78)_ I guess it could be possible to use some _(rce)_ exploit to gain access to your own bought system...
+
+I am not sure if it is worth the effort though, yet, but played a bit with [cve-bin-tool](https://github.com/intel/cve-bin-tool) scanning the local copy of the pop2 os and it found multiple vulnerabilities
+
+```
+│ CRITICAL │ 48    │
+│ HIGH     │ 737   │
+│ MEDIUM   │ 725   │
+│ LOW      │ 58    │
+```
+
+where the most obvious services dropbear and lighttpd at least have 4 hits:
+
+```
+$ grep "dropbear\|lighttpd" pop2-cve-bin-tool.txt | grep "CVE-"
+│ lighttpd             │ lighttpd       │ 1.4.41   │ CVE-2018-19052   │ NVD    │ HIGH     │ 7.5 (v3)             │
+│ lighttpd             │ lighttpd       │ 1.4.41   │ CVE-2019-11072   │ NVD    │ CRITICAL │ 9.8 (v3)             │
+│ dropbear_ssh_project │ dropbear_ssh   │ 2019.78  │ CVE-2020-36254   │ NVD    │ HIGH     │ 8.1 (v3)             │
+│ dropbear_ssh_project │ dropbear_ssh   │ 2019.78  │ CVE-2021-36369   │ NVD    │ HIGH     │ 7.5 (v3)             │
+```
+_(the `lighttpd.conf` used has `mod_alias` commented out, so at least CVE-2018-19052 seems to be a false positive, and I'm not convinced that the other three help us anything with our problem)_
+
+
+Might help to gain access to a firmware archive, but unfortunately there are no publically available download urls available (I wonder where the GPL part of the "firmware" is hosted...)
+I searched a bit in the RevoScan5.exe binary and in pcaps generated while running the exe through wine (not useable, but my goal was to get some network traffic), but haven't found anything interesting.
+
+Seems like the firmware is pulled somewhere from 
+
+`https://api.infly3d.com`
+
+found references to
+
+```
+https://api.infly3d.com/ota/version/info
+https://api.infly3d.com/software/version/info
+https://ssrstatic.infly3d.com/video/resource_download/device/
+```
+
+most trial&error url attempts are redirected to https://www.baidu.com/
+
+
+`/tmp/webroot/upload.html`
+
+contains
+`/tmp/webroot/upgrade.img`
+
+which might indicate that this is the firmware filename used (possibly hosted under a different name)
+
+might help digging a bit more in the RevoScan5.exe strings, as it at least contains things like
+
+```
+/firmware/
+[ota] start upgrade firmware fail, md5 is error, stop upgrade
+[ota] start upgrade firmware fail, stop upgrade
+```
+
+good luck so far

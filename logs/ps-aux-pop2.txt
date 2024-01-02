@@ -1,0 +1,104 @@
+[root@REVO:~]# ps aux
+USER      PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        1  0.0  0.0   2056   544 ?        Ss   00:00   0:00 init
+root        2  0.0  0.0      0     0 ?        S    00:00   0:00 [kthreadd]
+root        3  0.0  0.0      0     0 ?        I<   00:00   0:00 [rcu_gp]
+root        4  0.0  0.0      0     0 ?        I<   00:00   0:00 [rcu_par_gp]
+root        5  0.0  0.0      0     0 ?        I    00:00   0:00 [kworker/0:0-eve]
+root        6  0.0  0.0      0     0 ?        I<   00:00   0:00 [kworker/0:0H-dh]
+root        8  0.0  0.0      0     0 ?        I<   00:00   0:00 [mm_percpu_wq]
+root        9  0.0  0.0      0     0 ?        S    00:00   0:00 [ksoftirqd/0]
+root       10  0.0  0.0      0     0 ?        I    00:00   0:00 [rcu_preempt]
+root       11  0.0  0.0      0     0 ?        I    00:00   0:00 [rcu_sched]
+root       12  0.0  0.0      0     0 ?        I    00:00   0:00 [rcu_bh]
+root       13  0.0  0.0      0     0 ?        S    00:00   0:00 [migration/0]
+root       14  0.0  0.0      0     0 ?        S    00:00   0:00 [cpuhp/0]
+root       15  0.0  0.0      0     0 ?        S    00:00   0:00 [cpuhp/1]
+root       16  0.0  0.0      0     0 ?        S    00:00   0:00 [migration/1]
+root       17  0.0  0.0      0     0 ?        S    00:00   0:00 [ksoftirqd/1]
+root       20  0.0  0.0      0     0 ?        P    00:00   0:00 [cpuhp/2]
+root       21  0.0  0.0      0     0 ?        P    00:00   0:00 [migration/2]
+root       22  0.0  0.0      0     0 ?        P    00:00   0:00 [ksoftirqd/2]
+root       23  0.0  0.0      0     0 ?        I    00:00   0:00 [kworker/2:0]
+root       24  0.0  0.0      0     0 ?        I<   00:00   0:00 [kworker/2:0H]
+root       25  0.0  0.0      0     0 ?        P    00:00   0:00 [cpuhp/3]
+root       26  0.0  0.0      0     0 ?        P    00:00   0:00 [migration/3]
+root       27  0.0  0.0      0     0 ?        P    00:00   0:00 [ksoftirqd/3]
+root       28  0.0  0.0      0     0 ?        I    00:00   0:00 [kworker/3:0]
+root       29  0.0  0.0      0     0 ?        I<   00:00   0:00 [kworker/3:0H]
+root       30  0.0  0.0      0     0 ?        S    00:00   0:00 [kdevtmpfs]
+root       31  0.0  0.0      0     0 ?        I    00:00   0:00 [kworker/u8:1-ev]
+root       32  0.0  0.0      0     0 ?        S    00:00   0:00 [rcu_tasks_kthre]
+root       33  0.0  0.0      0     0 ?        D    00:00   0:00 [kworker/0:1+eve]
+root       34  0.0  0.0      0     0 ?        S    00:00   0:00 [oom_reaper]
+root       35  0.0  0.0      0     0 ?        I<   00:00   0:00 [writeback]
+root       36  0.0  0.0      0     0 ?        S    00:00   0:00 [kcompactd0]
+root       37  0.0  0.0      0     0 ?        SN   00:00   0:00 [ksmd]
+root       38  0.0  0.0      0     0 ?        I<   00:00   0:00 [crypto]
+root       39  0.0  0.0      0     0 ?        I<   00:00   0:00 [kblockd]
+root       40  0.0  0.0      0     0 ?        S    00:00   0:00 [kconsole]
+root       41  0.0  0.0      0     0 ?        I<   00:00   0:00 [devfreq_wq]
+root       42  0.0  0.0      0     0 ?        S    00:00   0:00 [watchdogd]
+root       43  0.1  0.0      0     0 ?        I    00:00   0:03 [kworker/1:1-eve]
+root       44  0.0  0.0      0     0 ?        I<   00:00   0:00 [rpciod]
+root       45  0.0  0.0      0     0 ?        I<   00:00   0:00 [kworker/u9:0]
+root       46  0.0  0.0      0     0 ?        I<   00:00   0:00 [xprtiod]
+root       47  0.0  0.0      0     0 ?        I<   00:00   0:00 [cfg80211]
+root       48  0.0  0.0      0     0 ?        S    00:00   0:00 [kswapd0]
+root       49  0.0  0.0      0     0 ?        I<   00:00   0:00 [nfsiod]
+root       50  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/70-rockchip]
+root       51  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/71-rockchip]
+root       52  0.0  0.0      0     0 ?        I<   00:00   0:00 [rkvdec]
+root       53  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/51-ffb80000]
+root       54  0.0  0.0      0     0 ?        I<   00:00   0:00 [rkvenc]
+root       55  0.0  0.0      0     0 ?        I<   00:00   0:00 [iommu_wq]
+root       56  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/56-ffbb0000]
+root       57  0.0  0.0      0     0 ?        I<   00:00   0:00 [vdpu]
+root       58  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/54-ffb90400]
+root       59  0.0  0.0      0     0 ?        I<   00:00   0:00 [vepu]
+root       60  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/53-ffb90000]
+root       61  0.0  0.0      0     0 ?        S    00:00   0:00 [hwrng]
+root       62  0.0  0.0      0     0 ?        S    00:00   0:00 [spi0]
+root       63  0.0  0.0      0     0 ?        I<   00:00   0:00 [rkisp bridge wo]
+root       64  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/35-rockchip]
+root       65  0.6  0.0      0     0 ?        S    00:00   0:19 [irq/36-rockchip]
+root       66  0.0  0.0      0     0 ?        D    00:00   0:00 [kworker/0:2+eve]
+root       67  0.0  0.0      0     0 ?        I    00:00   0:00 [kworker/1:2-eve]
+root       77  0.0  0.0      0     0 ?        S<   00:00   0:00 [krfcommd]
+root       80  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/39-rga]
+root       81  0.0  0.0      0     0 ?        S    00:00   0:00 [ubi_bgt0d]
+root       82  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/77-msg-irq]
+root      101  0.0  0.0   2056   192 ?        S    00:00   0:00 /sbin/syslogd -n
+root      104  0.0  0.0   2056   192 ?        S    00:00   0:00 /sbin/klogd -n
+root      115  0.0  0.1   2656  1368 ?        Ss   00:00   0:00 /sbin/udevd -d
+root      307  0.0  0.0      0     0 ?        S    00:00   0:00 [ubi_bgt6d]
+root      319  0.0  0.0      0     0 ?        S    00:00   0:00 [ubifs_bgt6_0]
+root      367  0.0  0.0      0     0 ?        S    00:00   0:00 [ubi_bgt7d]
+root      379  0.0  0.0      0     0 ?        S    00:00   0:00 [ubifs_bgt7_0]
+dbus      388  0.0  0.1   2504   988 ?        Ss   00:00   0:00 dbus-daemon --system
+root      395  0.0  0.0      0     0 ?        I<   00:00   0:00 [ext_eventd]
+root      396  0.2  0.0      0     0 ?        S    00:00   0:06 [dhd_watchdog_th]
+root      397  0.2  0.0      0     0 ?        S    00:00   0:07 [dhd_dpc]
+root      398  0.0  0.0      0     0 ?        S    00:00   0:01 [dhd_rxf]
+root      421  0.0  0.1   1916   860 ?        Ss   00:00   0:00 /usr/sbin/dropbear -R
+root      425  0.0  0.0   2180   328 ?        S    00:00   0:00 /usr/sbin/fcgiwrap -f -s unix:/run/fcgiwrap.sock
+root      449  0.0  0.2  20784  1668 ?        Sl   00:00   0:00 /tmp/lighttpd/lighttpd -f /tmp/lighttpd/lighttpd.conf -m /tmp/lighttpd/weblib/
+root      509  0.0  0.0      0     0 ?        S    00:00   0:00 [irq/72-dwc3]
+root      544  0.0  0.0      0     0 ?        I<   00:00   0:00 [kworker/1:1H-dh]
+root      545  0.0  0.0      0     0 ?        I<   00:00   0:00 [dhd_eventd]
+root      546  0.5  0.0      0     0 ?        I    00:00   0:15 [kworker/0:3-eve]
+root      556  0.0  0.1   5532  1416 ?        Ss   00:00   0:00 hostapd -B /data/hostapd.conf
+root      559  0.0  0.2   6068  1924 ?        Ss   00:00   0:00 wpa_supplicant -B -i wlan0 -c /data/wpa_supplicant.config
+root      561  0.0  0.4   4916  3112 ?        Ss   00:00   0:00 dhcpd
+root      562  1.4  4.2 354464 31716 ?        Sl   00:00   0:44 /tmp/zxmain
+root      563  0.0  0.1   2056   928 ?        S    00:00   0:00 /bin/sh /userdata/watchlog.sh
+root      570  0.0  0.0   2056   196 ttyFIQ0  Ss+  00:00   0:00 -/bin/sh
+root      577  3.2  0.0      0     0 ?        S    00:00   1:38 [irq/74-mpu6050_]
+root      601  0.0  0.0      0     0 ?        I<   00:00   0:00 [kworker/1:2H]
+root      606  0.0  0.0      0     0 ?        I<   00:00   0:00 [kworker/0:1H]
+root      621  0.0  0.0   2056    52 ?        Ss   00:00   0:00 /sbin/udhcpc -b -i wlan0
+root      665  0.0  0.1   2272  1088 ?        Rs   00:01   0:00 /usr/sbin/dropbear -R
+root      666  0.0  0.1   2056  1100 pts/0    Ss   00:01   0:00 -sh
+root      888  0.0  0.0      0     0 ?        I    00:10   0:00 [kworker/u8:0-ev]
+root     1856  0.0  0.0   4692   556 ?        S    00:50   0:00 sleep 10
+root     1858  0.0  0.1   2384   960 pts/0    R+   00:50   0:00 ps aux
